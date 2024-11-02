@@ -16,10 +16,10 @@ namespace CustomFormsApp.Controllers
             return View();
         }
 
-        public IActionResult Templates()
-        {
-            return View();
-        }
+        //public IActionResult Templates()
+        //{
+        //    return View();
+        //}
 
         [Authorize(Roles = "RegisteredUser, Admin")]
         public IActionResult User()
