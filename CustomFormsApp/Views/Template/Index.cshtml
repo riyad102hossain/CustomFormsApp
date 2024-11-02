@@ -2,7 +2,12 @@
 @{
     ViewData["Title"] = "Template List";
 }
+
 <h2>Templates</h2>
+
+<!-- Add the Create New Template button here -->
+<a href="@Url.Action("Create", "Template")" class="btn btn-primary mb-3">Create New Template</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -21,7 +26,7 @@
                 <td>@template.Tags</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@template.Id" class="btn btn-secondary">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@template.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="Delete" asp-route-id="@template.Id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this template?');">Delete</a>
                 </td>
             </tr>
         }

@@ -11,6 +11,7 @@ namespace CustomFormsApp.Db_Context
 
 
         public DbSet<Template> Templates { get; set; }
+        public DbSet<Question> Questions { get; set; }
     }
 
     

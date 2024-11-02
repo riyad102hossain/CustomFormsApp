@@ -7,13 +7,19 @@ namespace CustomFormsApp.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(100)]
         public string Title { get; set; }
 
-        public string Description { get; set; } // Markdown supported
+        public string Description { get; set; }
+
         public string Topic { get; set; }
 
-        [StringLength(100)]
-        public string Tags { get; set; } // comma-separated tags
+        public string ImageUrl { get; set; }
+
+        public string Tags { get; set; }
+
+        public bool IsPublic { get; set; }
+
+        // Collection of Questions
+        public List<Question> Questions { get; set; } = new();
     }
 }
